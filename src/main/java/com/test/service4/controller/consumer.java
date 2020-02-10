@@ -26,7 +26,6 @@ public class consumer {
         return mSendRequest.sendRequest("http://gateway/service3/provider/get/"+id, User.class, RequestMethod.GET);
     }
 
-
     @GetMapping("/getServce5")
     public String get(){
         return mSendRequest.sendRequest("http://gateway/service5/provider/getServiceInfo", String.class, RequestMethod.GET);
