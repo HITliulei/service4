@@ -17,17 +17,14 @@ public class consumer {
     @Autowired
     private MSendRequest mSendRequest;
 
-    @GetMapping("/get1")
-    public String getRequestVersion(){
-        return mSendRequest.sendRequest("http://gateway/service3/provider/getServiceInfo","1.0.0", String.class, RequestMethod.GET);
-    }
     @GetMapping("/get2/{id}")
     public User get(@PathVariable("id")int id){
         return mSendRequest.sendRequest("http://gateway/service3/provider/get/"+id, User.class, RequestMethod.GET);
     }
 
-    @GetMapping("/getServce5")
-    public String get(){
-        return mSendRequest.sendRequest("http://gateway/service5/provider/getServiceInfo", String.class, RequestMethod.GET);
+    @GetMapping("/get")
+    public String geta(){
+        return mSendRequest.sendRequest("http://gateway/service3/provider/only", String.class, RequestMethod.GET);
     }
+
 }
