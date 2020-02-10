@@ -9,7 +9,7 @@ eureka:
     prefer-ip-address: true
     metadata-map:
       serviceName: service4
-      version: v1.1.0
+      version: v2.0.0
       serviceDepencies:
         service3: v2.0.0
   client:
